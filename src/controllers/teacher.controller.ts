@@ -55,7 +55,7 @@ export async function updateTeacher(req: Request, res: Response): Promise<Respon
 
 
 export async function getTargetMathTeacher(req: Request, res: Response): Promise<Response> {
-    const canTeachSubjects = req.query.canTeachSubjects = 'Math';
+    const canTeachSubjects = req.query.canTeachSubjects || 'Math';
     const yearsExperience = req.query.yearsExperience || 10;
     const dayOfTheWeek = req.query.dayOfTheWeek || 'Thursday';
     const startTime = req.query.startTime || '08:30:00';
