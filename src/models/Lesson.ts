@@ -1,7 +1,7 @@
 export interface Lesson {
-    idLesson?: string;
-    idClassroom: string;
-    idTeacher: string;
+    idLesson?: number;
+    idClassroom: number;
+    idTeacher: number;
     subjectName: subjectName;
     dayOfTheWeek: dayOfTheWeek;
     startTime: string;

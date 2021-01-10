@@ -2,9 +2,9 @@ import { Application } from 'express';
 var express = require("express");
 var morgan = require('morgan')
 var bodyParser = require("body-parser")
-// Routes
-import IndexRoutes from './routes/index.route';
 
+import IndexRoutes from './routes/index.route';
+import TeachersRoutes from './routes/teacher.route';
 
 class App {
   private app: Application;
@@ -28,6 +28,7 @@ class App {
 
   routes() {
     this.app.use(IndexRoutes);
+    this.app.use('/teachers', TeachersRoutes);
     
   }
 

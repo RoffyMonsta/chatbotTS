@@ -1,7 +1,7 @@
 import { subjectName } from './Lesson';
 
 export interface Teacher {
-  idTeacher?: string;
+  idTeacher?: number;
   name: string;
   surname: string;
   sex: string;
