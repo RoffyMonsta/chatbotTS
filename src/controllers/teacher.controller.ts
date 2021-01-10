@@ -2,7 +2,7 @@ import {Request, Response} from 'express';
 import {Teacher} from '../models/Teacher';
 import connect from '../db';
 
-const teacherSql = 'SELECT * FROM teacher t';
+const teacherSql = 'SELECT t.idTeacher, t.name, t.surname, t.sex, t.birthDate, t.canTeachSubjects, t.yearsExperience, t.workedInUniversities FROM teacher t';
 
 export async function getAllTeachers(req: Request, res: Response): Promise<Response> {
     const conn = await connect();

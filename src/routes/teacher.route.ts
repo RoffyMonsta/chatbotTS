@@ -14,7 +14,7 @@ router.route('/')
   .get(getAllTeachers)
   .post(createTeacher);
 
-router.route('/mathTeachers')
+router.route('/getTargetMathTeacher')
   .get(getTargetMathTeacher);
 
 router.route('/:teacherId')
